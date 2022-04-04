@@ -50,7 +50,6 @@ Q: What is the content of the .gitignore file?
 The .gitignore file is a plain text document.
 Each line in the file specifies a pattern - Git will check .gitignore to review the patterns to discern what to ignore.
 
-
 Q: What are some files that git should generally ignore?
 Files that contain sensitive data, files that are system-specific, files with security and API keys/secrets, etc.
 
@@ -96,7 +95,6 @@ Q: What’s the difference between relative and absolute paths?
 Absolute path is the complete path of a file or directory; it is always preceded with a / since it will include the root directory.
 An example of an absolute path is a postal address (fully includes the building #, street name, city, state, zip code, country).
 Relative path is the file or directory location relative to the current working directory. It does not include the root path so it does not start-off with a /.
-
 
 Q: What’s the difference between parameters and arguments?
 Paramters are the defined types of argumentst that a function will accept.
