@@ -73,7 +73,7 @@ PART TWO:
 
 def hello_world():
     """
-    Prints 'Hello World'.
+    Print 'Hello World'.
 
     :param: None
     :return: None
@@ -87,7 +87,7 @@ def hello_world():
 
 def say_hi(name):
     """
-    Prints 'Hi {name}'.
+    Print 'Hi {name}'.
 
     :param name: name as a string
     return: None
@@ -101,7 +101,7 @@ def say_hi(name):
 
 def print_product(num1, num2):
     """
-    Prints the product of two integers.
+    Print the product of two integers.
 
     :param num1: first integer
     :param num2: second integer
@@ -115,7 +115,7 @@ def print_product(num1, num2):
 
 def repeat_string(phrase, n):
     """
-    Prints duplicate of a string based on n times. 
+    Print duplicate of a string based on n times. 
 
     :param phrase: word or string of words as a string
     :param n: integer
@@ -130,7 +130,7 @@ def repeat_string(phrase, n):
 
 def print_sign(number):
     """
-    Prints message 'Higher than 0', 'Lower than '0', or 'Zero' depending on met condition.
+    Print message 'Higher than 0', 'Lower than '0', or 'Zero' depending on met condition.
 
     :param number: integer
     :return: None
@@ -150,7 +150,7 @@ def print_sign(number):
 
 def is_divisible_by_three(number):
     """
-    Returns True if number is divisible by 3.
+    Return True if number is divisible by 3.
 
     :param number: integer
     :return: boolean
@@ -167,7 +167,7 @@ def is_divisible_by_three(number):
 
 def num_spaces(sentence):
     """
-    Returns number of spaces in a given string.
+    Return number of spaces in a given string.
 
     :param sentence: string
     :return: number of spaces in given string 
@@ -189,7 +189,7 @@ def num_spaces(sentence):
 
 def total_meal_price(price, tip=.15):
     """
-    Returns the total amount paid (price + price * tip); default tip = 15%
+    Return the total amount paid (price + price * tip); default tip = 15%
 
     :param price: price of meal as integer or float
     :param tip: tip percentage as integer or float
@@ -212,7 +212,7 @@ def total_meal_price(price, tip=.15):
 
 def sign_and_parity(number):
     """
-    Evaluates a number and returns a list of strings indicating if the number is either positie or negative and either even or odd.
+    Evaluate a number and returns a list of strings indicating if the number is either positie or negative and either even or odd.
 
     :param number: given number as integer
     :return: list of strings
@@ -242,7 +242,7 @@ def sign_and_parity(number):
 
 def full_title(name, title="Engineer"):
     """
-    Returns job title and name in one string.
+    Return job title and name in one string.
 
     :param name: name as a string
     :param title: job title as a string
@@ -264,7 +264,7 @@ def full_title(name, title="Engineer"):
 
 def write_letter(name, title, sender):
     """
-    Prints the following letter:
+    Print the following letter:
 
     Dear JOB_TITLE RECIPIENT_NAME, I think you are amazing!
         Sincerely, SENDER_NAME.
