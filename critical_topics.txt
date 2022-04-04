@@ -1,0 +1,205 @@
+Q: What is an algorithm? Provide some examples, both in the context in of computer science and beyond.
+An algorithm is a set of specific, step-by-step instructions that must be precisely followed as written in order to perform a computation (or solve the problem under consideration). 
+In computer science, solutions are known as "algorithms". 
+Typically, computer scientists will develop an algorithm to serve as a general solution. 
+The algorithm is represented into code, which the computer then uses to automate the execution of the algorithm.
+
+Q: What is a heuristic? How do they relate to algorithms?
+Heuristics are any practical methods that allow us to generate additional logic or "hints" to help us solve a problem. 
+They do not guarantee a solution, and so may not be optimal or rational, but they help us move closer to the solution.
+Heuristics differ from algorithms in that algorithms guarantee a solution to solving the problem. 
+
+Q: What is the brute force method? What are some problems with it?
+Brute force algorithms solve a problem by attempting every single possibility, which results in inefficient(Big O(mn)) runtime. 
+
+Q: What is version control? How is it different than simply saving a file?
+Version control allows us to safely track and save different versions of a file or project. 
+This is different from simply saving a file since saving a file overwrites the previous file version.
+With version control, we are able to monitor changes over time and even revert back to earlier version states to safely recover versions of the file. 
+
+Q: What’s the difference between Git and Github?
+Git is an open-source version control program that allows us to create a working directory to house files or projects and then track and push version commits (which stores the various version histories). 
+Git can run on Linux, OSX, and Windows machines. 
+GitHub is a cloud-based remote version control database, which we can push our local Git repositories into so our files and projects can be accessed on the cloud.
+GitHub also allows us to collaborate with other users. 
+
+Q: Git commands to know:
+
+    git log: Displays the log history of pushed commits. 
+
+    git init: Initializes the working directory to house files and projects.
+
+    git status: Displays the status of tracked and untracked files and any modifications that were made since the last version commit. 
+
+    git add: Adds a specified file to the working directory tree so we can later stage the file for a commit. 
+
+    git commit with -a and -m: Pushes a commit into the working directory. "a" means to push all tracked files and "m" means a commit message will be included.
+
+    git remote add: Adds a new remote to GitHub by passing two arguments: 1) Name of remote (i.e. "origin"), and 2) Remote URL (available via GitHub)
+
+    git remote -v: Checks what git thinks the remote(s) is (are); "v" flag stands for "verbose" so display more detailed info.
+
+    git push: Pushes the commit to the remote repository in GitHub. 
+
+Q: What does the file .gitignore do? 
+The .gitignore file explicitly specifies intentionally untracked files that Git should ignore when commiting your project to the repoistory in GitHub.
+These files will be listed in the root directory of the repository. 
+This is helpful for ignoring files containing sensitive data and to help maintain privacy.
+
+Q: What is the content of the .gitignore file?
+The .gitignore file is a plain text document.
+Each line in the file specifies a pattern - Git will check .gitignore to review the patterns to discern what to ignore.
+
+
+Q: What are some files that git should generally ignore?
+Files that contain sensitive data, files that are system-specific, files with security and API keys/secrets, etc.
+
+Q: How can you tell whether a file is being ignored by git or not?
+Run cat .gitignore
+
+Q: If you git add a secret file, is it possible to remove that file from the history of git?
+Yes, to simply remove a file: git rm.
+If you need to remove a file from .gitsecret then: git-secret-remove (you can also add the -c to delete existing encyrpted versions of the file, as well). 
+
+Q: Why is using the command line important?
+Using the command line is important to understand how directories are organized in our computer.
+It can also make our work more speedy and efficient. 
+It is less resource-intensive since we are not relying on a GUI and so the computer does not have to render graphical output. 
+
+Q: What is the prompt in the context of the command line?
+The prompt is a designated character in the CLI that indicates that a command is ready to be accepted.
+It might be a "$" symbol or "%" symbol or ">" symbol or something else. 
+
+Q: Shell commands to know:
+
+    ls: Prints/displays the non-hidden contents of the current working directory.
+
+    pwd: Prints/displays the current working directory.
+
+    cp: Copy command. Requires the path of the file to be copied and the destination path (name of copy).
+
+    mv: Move and Rename command. Requires the path of the file to be moved and the destinaton path (or rename of the file).
+
+    cd: Changes the location of the current working directory into the specified directory.
+
+    mkdir: Creates a new directory.
+
+    rm: Removes a directory or file.
+
+    man: Built-in "manual page" that allows us to view the reference manuals of a command or utility.
+
+    any command with --help: Help command prints reference information about the specified command.
+
+    CTRL-D and CTRL-C: CTRL-D closes the entire terminal session. CTRL-C closes the currently-running program.
+
+Q: What’s the difference between relative and absolute paths?
+Absolute path is the complete path of a file or directory; it is always preceded with a / since it will include the root directory.
+An example of an absolute path is a postal address (fully includes the building #, street name, city, state, zip code, country).
+Relative path is the file or directory location relative to the current working directory. It does not include the root path so it does not start-off with a /.
+
+
+Q: What’s the difference between parameters and arguments?
+Paramters are the defined types of argumentst that a function will accept.
+Arguments are the actual value, which should align with the parameter requirements, being passed into a function during a program's run-time.
+
+Q: What’s the difference between return, break, and print?
+Return - Stores a value into the function call and exits the function after the return statement is executed.
+Break - Exits a loop but does not inherently return anything.
+Print - Prints or displays output but does not inherently return anything.
+
+Q: What does a function return if it doesn’t have a return statement?
+A "None" type value.
+
+Q: What is a default parameter?
+A default parameter is a specified value that will be used in the function if an argument is not passed during the function call. 
+
+Q: What is scope? What is function scope?
+Scope defines the lifetime of a variable. 
+A variable with a global scope can be accessed throughout the program.
+A local variable can be accessed only within the defined scope of the program, i.e. within a function. 
+Local variables within a function cannot be accessed outside of the actual function body.
+
+Q: What are some important Python style considerations for writing functions?
+A function should be designed to complete one part of a computation ("one unit of thought") in the program and not be too verbose in attempting to solve multi-parts of the program.
+The functioin name should be "verby", which means descriptive in its purported action.
+The function signature always includes the function's parameter and return value. 
+It is a good practice to pass function values in explicitly and not reply on globally-defined variables.
+If a function does not include a "return" statement then the function will return a "None" type value.
+Good functions include docstrings which detail the function's purpose, defined parameters, and defined return type.
+
+Q: Python built-list methods/functions to know:
+
+    sorted(): Returns a new list of alpha-sorted values.
+
+    .sort(): Alpha-sorts a list in ascending (smallest to largest) order. Call .sorted(reverse=True) to sort in descending order.
+
+    .append(): Adds an item to a list; requires a passed value.
+
+    .extend(): Adds an item to a list as a tokenized version of the item (i.e. animals.extend("fox) => animals: ["f", "o", "x])
+
+Q: How to index a list:
+Access the element by the list index number (index always starts with "0").
+
+Q: How to slice a list:
+Start::Stop (Up to, not including):: Step
+
+Q: How to loop over a list:
+Syntax is: for element in list: do something.
+
+Q: Using range(len(some_list)):
+Syntax is: for iterable in range(len(some_list))
+
+Q: Using a counter and indexing the list:
+You can initialize a counter variable and index the list via the counter variable.
+
+Q: Without using either of the above (just a for-loop):
+Syntax is: for element in list: do something.
+
+Q: What is mutability?
+The ability to alter or change or modify a data object in place without creating a completely new variable.
+
+Q: How is Python memory different than C memory? 
+Python manages a lot of memory management for us under the hood. 
+Like C, variables are stored at memory addresses but we do not have to declare or allocate memory or malloc memory.
+In Python, identifers point to different memory addresses for objects that are created or eassigned; whereas in C, variables that are reassigned are updated at the same memory location assuming there is enough memory to store the updated value.
+
+Q: How are Python variables different than “classic” variables?
+In Python, there aren't really variables but, rather, identifers that point to different objects in memory.
+
+Q: What is garbage collection?
+Garbage collection destroys/releases memory that is no longer being used; occurs throughout a program and when a program terminates. 
+
+Q: What is the id function? 
+The id() function accepts an identifer as an element and returns the unique Python ID# that functions similarly to a memory address.
+
+Q: What does the comparator is do in Python?
+The is comparator checks to see if two objects are the same objects in memory.
+
+Q: What are sets good for?
+Sets allow us to extrapolate unique, non-duplicate collections of data. 
+Sets are mutable, iterable, and unordered. 
+We can perform useful operations on sets such as set math. 
+
+Q: Set methods to know:
+
+    .add(): Adds the element passed through the function to the set in an unordered position.
+
+    len(): Retrieves the total number of elements in a set or the length of the set. 
+
+    .remove(): Accepts a specific element as an argument and will remove the element from the set.
+
+Q: How to create a set?
+Use the set constructor function and pass an iterable through (i.e. moods = set(["happy", "sad"])), or use curly braces (i.e. moods = {"happy", "sad"}).
+
+Q: How to check if something is in a set?
+We can use the "in" operator to check for membership in a set.
+
+Q: What are tuples good for?
+Tuples are a collection type of data object that are immutable, iterable, and ordered.
+Tuples are useful for grouping data with meaningful order (i.e. name & SSN, RGB color system, latitude & longitude).
+
+Q: How do you create a tuple?
+Pass the the item(s) through a set of parenthesis (i.e. name_SSN_DOB = (name, SSN, DOB) or name = (name, )).
+
+Q: How to index a tuple?
+To access the SSN in name = (name, SSN, DOB), use name [1]. 
