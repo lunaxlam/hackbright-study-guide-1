@@ -89,7 +89,7 @@ def say_hi(name):
     """
     Prints 'Hi {name}'.
 
-    :param: name as a string
+    :param name: name as a string
     return: None
     """
 
