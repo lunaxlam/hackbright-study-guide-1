@@ -381,8 +381,18 @@ def duplicates(items):
         ['apple', 'apple', 'berry']
     """
 
+    unique_items = []
+    duplicate_items = []
 
-    return []
+    for item in items:
+        if item not in unique_items:
+            unique_items.append(item)
+        elif item not in duplicate_items:
+            duplicate_items.append(item)
+    
+    duplicate_items.sort()
+
+    return duplicate_items
 
 
 def find_letter_indices(words, letter):
@@ -410,7 +420,15 @@ def find_letter_indices(words, letter):
     `None`.)
     """
 
-    return []
+    indices = []
+
+    for i, word in enumerate(words):
+        if letter not in word:
+            indices.append(None)
+        elif letter in word:
+            indices.append(i)
+
+    return indices
 
 
 #####################################################################
