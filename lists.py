@@ -17,6 +17,7 @@ def print_list(items):
         9
     """
 
+    # Iterate through each item in the list and print the item on in its own line
     for item in items:
         print(item)
 
@@ -38,8 +39,10 @@ def long_words(words):
         []
     """
     
+    # Create an empty list to store only words with letters longer than 4 chars in length
     long_words = []
 
+    # Iterate through the list to check the condition and add the word to the empty list if meets condition
     for word in words:
         if len(word) > 4:
             long_words.append(word)
@@ -61,8 +64,10 @@ def n_long_words(words, n):
         ['apples', 'bananas']
     """
 
+    # Create an empty list to store only words with letters longer than n chars in length
     n_long_words = []
 
+    # Iterate through the list to check the condition and add the word to the empty list if meets condition
     for word in words:
         if len(word) > n:
             n_long_words.append(word)
@@ -90,6 +95,7 @@ def smallest_int(numbers):
     if numbers == []:
         smallest_int = None
     else:
+        # Initialize smallest_int as the first element of the list
         smallest_int = numbers[0]
 
         for number in numbers:
@@ -119,6 +125,7 @@ def largest_int(numbers):
     if numbers == []:
         largest_int = None
     else:
+        # Initialize largest_int as the first element of the list
         largest_int = numbers[0] 
 
         for number in numbers:
@@ -164,7 +171,7 @@ def word_lengths(words):
     word_lengths = []
 
     for word in words:
-        word_lengths.append(len(word))
+        word_lengths.append(len(word))          # Stores only the length of the word
 
     return word_lengths
 
@@ -218,7 +225,7 @@ def mult_numbers(numbers):
     elif 0 in numbers:
         return 0
     else:
-        product = 1
+        product = 1                             # Initialize the product as 1 since first element * 1 = first element
 
         for number in numbers:
             product *= number
@@ -245,7 +252,7 @@ def join_strings(words):
     join_strings = ""
 
     for word in words:
-        join_strings += word
+        join_strings += word                    # Concatenate each word to join_strings
 
     return join_strings
 
@@ -330,7 +337,7 @@ def reverse_list(items):
         ['apple', 'berry', 'cherry']
     """
 
-    items = items[::-1]
+    items = items[::-1]                         # Step through the list backwards by 1
 
     return items
 
@@ -352,7 +359,7 @@ def reverse_list_in_place(items):
         >>> reverse_list_in_place(orig)
         ['I', 'love', 'cookies']
     """
-    
+
     return items[::-1]
 
 
