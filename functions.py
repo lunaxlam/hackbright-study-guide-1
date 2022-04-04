@@ -187,7 +187,7 @@ def num_spaces(sentence):
 #    (price + price * tip). **However:** passing in the tip percentage should
 #    be optional; if not given, it should default to 15%.
 
-def total_meal_price(price, tip=15):
+def total_meal_price(price, tip=.15):
     """
     Returns the total amount paid (price + price * tip); default tip = 15%
 
@@ -240,6 +240,19 @@ def sign_and_parity(number):
 #    parameters, making it so the job title defaults to "Engineer" if a job
 #    title is not passed in. Return the person's title and name in one string.
 
+def full_title(name, title="Engineer"):
+    """
+    Returns job title and name in one string.
+
+    :param name: name as a string
+    :param title: job title as a string
+    :return: job title and name in a string
+    """
+
+    full_title = f"{title} {name}"
+
+    return full_title
+
 # 2. Write a function called write_letter that, given a recipient name & job
 #    title and a sender name, prints the following letter:
 #
@@ -249,6 +262,19 @@ def sign_and_parity(number):
 #    Use the function from #1 to construct the full title for the letter's
 #    greeting.
 
+def write_letter(name, title, sender):
+    """
+    Prints the following letter:
+
+    Dear JOB_TITLE RECIPIENT_NAME, I think you are amazing!
+        Sincerely, SENDER_NAME.
+    
+    :param name: recipient name as a string
+    :param title: job title as a string
+    :sender: sender name as a string
+    """
+
+    print(f"Dear {full_title(name, title)}, I think you are amazing! Sincerely, {sender}")
 
 ###############################################################################
 
